@@ -1,0 +1,84 @@
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/multivariate_2023")
+usAir<-read.csv("usAir_mod.csv", row=1, header = TRUE)
+usAir
+##checking your data
+dim(usAir)
+?dim
+#####let’s look at the structure of your data:
+str(usAir)
+
+###Manipulating data##
+##The first thing that you should know and always remember when it comes to data frames or matrices is that an element in a matrix is identified by [ROW, COLUMN]
+ 
+###Extracting elements
+usAir[1,1]
+usAir[1,7]
+###Extracting single rows and columns
+#To extract the first row from “usAir”:
+usAir[1,]
+#To extract the first column from “usAir”:
+usAir[,1]
+
+###Dropping single rows and columns
+#To drop the first row from “usAir”:
+  usAir[-1,]
+###To drop the first column from “usAir”:
+  usAir[,-1]
+
+###Extracting multiple rows and columns
+#You can also extract multiple rows or columns. To extract the first five rows from “usAir”:
+    usAir[1:5,]
+###To extract the first five columns from “usAir”:
+  usAir[,1:5]
+  
+## Dropping multiple rows and columns
+# you can also drop multiple rows or columns. To drop the first five rows from “usAir”:
+  usAir[-(1:5),]
+#To drop the first five columns from “usAir”:
+usAir[,-(1:5)]
+
+### Selecting columns and rows with logical operators
+usAir[usAir[,2]<50,]
+
+##Transposing data
+#You can transpose a data frame:
+t(usAir)
+#but to transpose a row or column, you must first convert it from a data frame into a matrix:
+matrix_usAir<-as.matrix(usAir$SO2)
+#then transpose it:
+t(matrix_usAir)
+
+##Sorting data
+##rank, sort, and order
+temp<-usAir$temp
+temp
+
+#Let’s apply each of these functions:
+ranks<-rank(temp)
+sorted<-sort(temp)
+ordered<-order(temp)
+
+#and combine them with the original temp values in a data table:
+table<-data.frame(temp,ranks,sorted,ordered)
+
+#Mathematical operations on:
+#Rows and Columns
+#To calculate mean, median, variance, or sum of a specific column, in this case column 3:
+mean(usAir[,3])
+median(usAir [,3])
+var(usAir [,3])
+sum(usAir [,3])
+#To calculate mean, median, variance, or sum of a specific row, in this case row 3, we need to transpose the row first:
+mean(t(usAir [3,]))
+median(t(usAir [3,]))    
+var(t(usAir [3,]))  
+
+#Data frames and matrices 
+columnSum<-colSums(usAir)
+rowSums(usAir)
+colSums(usAir)
+colMeans(usAir)
+rowMeans(usAir)
+
+##Exporting Data
+write.csv(columnSum, "Output/filename.csv")
