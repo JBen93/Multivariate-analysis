@@ -3,6 +3,11 @@
 #DA allows you to determine what variables are important in separating groups. 
 #It is an eigenanalysis that reduces dimensionality of multivariate data in to new “canonical axes”.
 #Set up R session
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 #Data
 #Today you will be using the iris data set found in the package datasets in R. To access this data set, simply type:
   iris

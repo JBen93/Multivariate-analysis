@@ -1,6 +1,10 @@
 #Data
 #Call in the data set “Current_Hawaiian_Birds.csv” from your working directory and name it birds.
-setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/multivariate_2023")
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 #Principal Coordinates Analysis (PCoA).
 birds<-read.csv("Current_Hawaiian_Birds.csv", row=1, header=TRUE)
 birds

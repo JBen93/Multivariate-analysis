@@ -2,7 +2,11 @@
 ##The goal of this lab is to apply Redundancy Analysis (RDA) to determine the influence of explanatory variables on patterns of variation in multivariate response variables.
 ##Constrained ordination is an extension of unconstrained ordination techniques in which the solution is constrained to be expressed by explanatory variables. 
 ##You will also explore variable selection and variance partitioning to further interpret the results of RDA. These methods can also be applied to CCA.
-
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 ##Download packages###
 ##We will be using the following packages:
 library(vegan)

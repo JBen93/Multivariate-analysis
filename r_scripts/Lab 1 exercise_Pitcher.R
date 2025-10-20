@@ -1,4 +1,6 @@
-setwd("C:/Users/Joshua/OneDrive/Ph.D dissertation/Data capertry/Multivariate_2023")
+rm(list =ls())
+#Set up renv
+renv::restore()
 Pitcher<-read.csv("Pitcher.csv", row=1, header = TRUE)
 Pitcher
 ##checking your data

@@ -1,3 +1,8 @@
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 #Matrix Algebra and Ordination Part I
 #Install and load packages
 library(mvnormtest)

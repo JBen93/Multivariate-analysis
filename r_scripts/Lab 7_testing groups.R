@@ -6,7 +6,11 @@
 #You will be using two different data sets today. 
 #For the MRPP you will use the snail morphology data set “snails_data.csv” which you are familiar with (remember use only the first three columns for the snail data set).
 #For PerMANOVA and ANOSIM, you will use the data set detailing the current and historical composition of bird communities across the Hawaiian Islands “combined_birds.csv” which you are also familiar with.
-setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/multivariate_2023")
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 snails<-read.csv("snail_data.csv", row=1, header=TRUE)[,1:3]
 #Download packages
 #We will be using the following packages:

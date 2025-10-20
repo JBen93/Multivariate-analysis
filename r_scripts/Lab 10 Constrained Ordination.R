@@ -12,7 +12,11 @@ library(raster)
 library(vegan)
 #You will also be using a function from a Biostats package developed by Kevin McGarigal.
 #Save this package (i.e., R script) to your working directory and use the source function to call it in:
-setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/multivariate_2023")
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 source("biostats.r")
 
 #Import data

@@ -1,7 +1,11 @@
 
 #Multiple Response Permutation Procedure (MRPP) to test the clusters for the pitcher 
 #Set the working directory
-setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/multivariate_2023")
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 # Data ~Darlingtonia data and call it pitcher 
 pitcher<-read.csv("Darlingtonia.csv", row=1, header=TRUE)
 pitcher

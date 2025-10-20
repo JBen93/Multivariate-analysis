@@ -1,7 +1,11 @@
 # Cluster analysis##lecture 5
 # start by calling data in
 #Data
-setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/multivariate_2023")
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 snails<-read.csv("snail_data.csv", row=1, header=TRUE)[,1:3]
 snails
 ####Download packages

@@ -9,7 +9,12 @@
 #install.packages("MASS")
 #install.packages("raster")
 #install.packages("cluster")
-
+#clear the environment
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 library(mvnormtest)
 library(MVN)
 library(MVA)
@@ -23,8 +28,7 @@ library(cluster)
 
 
 #Importing Data
-rm(list =ls())
-setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/multivariate_2023")
+
 usAir<-USairpollution
 usAir
 #or

@@ -2,7 +2,11 @@
 #The goal of this lab is to become familiar with the application of Polythetic Hierarchical Divisive and Agglomerative Clustering.
 #Data
 #Call in the data set “Caribbean_birds.csv” from your working directory and call it ‘birds’. 
-setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/multivariate_2023")
+rm(list =ls())
+#Set up renv
+renv::restore()
+#set your working directory
+setwd("/Users/Joshua/Library/CloudStorage/OneDrive-UniversityofFlorida/Multivariate analysis")
 birds<-read.csv("Caribbean_birds.csv", row=1, header=TRUE)
 
 #Download packages
