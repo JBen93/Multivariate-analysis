@@ -1,0 +1,15 @@
+
+model{
+  for(i in 1:n){
+    y[i] ~ dnorm(mu[i], tau)
+    mu[i] <- a + b*x[i]
+  }
+
+  # priors
+  a ~ dnorm(0, 0.001)
+  b ~ dnorm(0, 0.001)
+
+  tau <- 1 / (sigma*sigma)
+  sigma ~ dunif(0, 10)
+}
+
